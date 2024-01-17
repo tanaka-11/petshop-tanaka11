@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Variáveis em CSS</title>
+    <link
+      rel="shortcut icon"
+      href="public/images/favicon.png"
+      type="image/png"
+      sizes="256x256"
+    />
+
+    <style>
+      /* Variáveis no CSS são utilizados com a pseudo-classe :root */
+      :root {
+        /* --nome: valor-da-variavel */
+        --cor: lightslategray;
+        --fonte: Verdana;
+        --cor-h2: darkblue;
+      }
+
+      body {
+        background-color: var(--cor);
+        font-family: var(--fonte);
+      }
+
+      h2 {
+        color: var(--cor-h2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">🎭</h1>
+    <hr />
+    <h2>Front-End</h2>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem et quae
+      quis. Veritatis quae ratione, incidunt distinctio corrupti vel error
+      quibusdam, aperiam aspernatur commodi optio molestias nihil autem ipsa.
+      Voluptate.
+    </p>
+    <hr />
+    <h2>Back-End</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officiis
+      sequi id laboriosam ipsum temporibus labore, quis veritatis tenetur
+      dignissimos eius possimus est odit distinctio reiciendis cum illo
+      explicabo porro.
+    </p>
+  </body>
+</html>

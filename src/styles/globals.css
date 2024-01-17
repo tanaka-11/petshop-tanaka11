@@ -17,9 +17,11 @@
   --sombra-box: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   --borda-arredondada: 0.5rem;
 }
+
 html {
   font-size: 16px;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -32,11 +34,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 h1,
 h2,
 h3 {
   font-family: "Fjalla One", sans-serif;
 }
+
 h2 {
   margin: 1rem 0;
   color: #262626;
@@ -45,6 +49,7 @@ h2 {
   box-shadow: var(--sombra-box);
   border-radius: var(--borda-arredondada);
 }
+
 .limitador {
   width: 90%;
   max-width: 1000px;
