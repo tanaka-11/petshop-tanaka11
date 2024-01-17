@@ -9,6 +9,7 @@ export default function Sobre() {
           name="description"
           content="Petshop criado com framework Next.js"
         />
+        <meta name="keywords" content="pets, petshop, cachorro, gato" />
       </Head>
 
       <section>
