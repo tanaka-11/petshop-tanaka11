@@ -13,7 +13,7 @@ export default function Layout({ children }) {
         </nav>
       </header>
 
-      <main>{children}</main>
+      <main className="limitador">{children}</main>
     </>
   );
 }
