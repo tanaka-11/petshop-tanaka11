@@ -7,7 +7,7 @@ export default function Home() {
         <title>PetShop Tanaka-11</title>
         <meta
           name="description"
-          content="Web App Petshop criado no curso de Téc. em Informática para Internet"
+          content="Web App Petshop criado no curso de Téc. em Informática para Internet com o framework Next.js"
         />
 
         <meta

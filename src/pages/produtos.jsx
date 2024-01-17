@@ -6,7 +6,11 @@ export default function Produtos() {
       <Head>
         <title>Produtos - PetShop</title>
         <meta name="description" content="Serviços destinados ao seu pet" />
-        <meta name="keywords" content="ração, banho, tosa, brinquedos" />
+
+        <meta
+          name="keywords"
+          content="ração, banho, tosa, brinquedos, remédio"
+        />
       </Head>
 
       <section>
