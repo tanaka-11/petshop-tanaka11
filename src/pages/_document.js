@@ -12,7 +12,7 @@ export default function Document() {
         />
 
         <meta name="author" content="Marina Tanaka" />
-        <meta name="keywords" content="pets, cat, dog, petshop" />
+        <meta name="keywords" content="pets, petshop, cachorro, gato" />
       </Head>
       <body>
         <Main />
