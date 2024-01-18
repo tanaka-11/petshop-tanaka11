@@ -12,7 +12,7 @@ const StyledHeader = styled.header`
     text-decoration: none;
     color: var(--cor-primaria);
     background-color: var(--cor-primaria-fundo);
-    padding: 0.5rem;
+    padding: 0.5rem 1.2rem;
     border-radius: var(--borda-arredondada);
     font-size: 1.5rem;
     display: flex;
