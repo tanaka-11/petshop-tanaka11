@@ -36,6 +36,17 @@ const StyledHeader = styled.header`
     flex-direction: column;
     padding: 1rem;
   }
+
+  @media screen and (min-width: 700px) {
+    div {
+      flex-direction: row;
+      padding-bottom: 0;
+    }
+
+    h1 a {
+      font-size: 2rem;
+    }
+  }
 `;
 
 export default function Cabecalho() {
