@@ -9,3 +9,7 @@
 - Map, Filter
 - Manipulação de formulário
 - PUblicação na Vercel e Netlify
+
+### Lembretes
+
+- Instalar `npm install styled-components`
