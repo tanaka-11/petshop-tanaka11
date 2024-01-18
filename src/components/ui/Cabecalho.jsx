@@ -37,6 +37,7 @@ const StyledHeader = styled.header`
     padding: 1rem;
   }
 
+  /* Media Queries */
   @media screen and (min-width: 700px) {
     div {
       flex-direction: row;
