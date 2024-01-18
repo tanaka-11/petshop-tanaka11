@@ -14,13 +14,13 @@ const StyledNav = styled.nav`
     padding: 0.8rem 1rem;
 
     &:first-child {
-      border-top-left-radius: 0.5rem;
-      border-bottom-left-radius: 0.5rem;
+      border-top-left-radius: var(--borda-arredondada);
+      border-bottom-left-radius: var(--borda-arredondada);
     }
 
     &:last-child {
-      border-top-right-radius: 0.5rem;
-      border-bottom-right-radius: 0.5rem;
+      border-top-right-radius: var(--borda-arredondada);
+      border-bottom-right-radius: var(--borda-arredondada);
     }
   }
 `;
