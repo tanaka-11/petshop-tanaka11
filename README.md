@@ -10,7 +10,7 @@
 - Manipulação de formulário
 - Publicação na Vercel e Netlify
 
-### Lembretes
+### Lembrete sobre o styled-component
 
 - Instalar `npm install styled-components`
 - Configurar o next.config para renderização do styled-component
