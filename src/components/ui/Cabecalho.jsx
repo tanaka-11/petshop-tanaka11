@@ -36,7 +36,6 @@ export default function Cabecalho() {
             PetShop
           </Link>
         </h1>
-
         <Menu />
       </div>
     </StyledHeader>
