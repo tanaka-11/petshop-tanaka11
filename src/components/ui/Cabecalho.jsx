@@ -18,6 +18,23 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover,
+    &:focus {
+      color: var(--cor-secundaria-hover);
+    }
+  }
+
+  img {
+    margin-right: 0.5rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
   }
 `;
 
