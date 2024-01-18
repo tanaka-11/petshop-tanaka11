@@ -1,4 +1,12 @@
 import Head from "next/head";
+import styled from "styled-components";
+
+// CSS
+const StyledSobre = styled.section`
+  h2::before {
+    content: "💡 ";
+  }
+`;
 
 export default function Sobre() {
   return (
@@ -12,9 +20,9 @@ export default function Sobre() {
         <meta name="keywords" content="pets, petshop, cachorro, gato" />
       </Head>
 
-      <section>
+      <StyledSobre>
         <h2>Sobre nosso PetShop</h2>
-      </section>
+      </StyledSobre>
     </>
   );
 }
