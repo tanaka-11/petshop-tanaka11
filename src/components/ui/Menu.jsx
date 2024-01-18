@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { usePathname } from "next/navigation";
 
 // CSS
 const StyledNav = styled.nav`
@@ -28,6 +29,10 @@ const StyledNav = styled.nav`
       background-color: var(--cor-primaria-fundo-hover);
     }
 
+    &.ativo {
+      background-color: lightslategray;
+    }
+
     @media screen and (min-width: 700px) {
       padding-left: 2rem;
       padding-right: 2rem;
@@ -36,12 +41,25 @@ const StyledNav = styled.nav`
 `;
 
 export default function Menu() {
+  const linkAtivo = usePathname();
+
   return (
     <StyledNav>
-      <Link href="/">Blog</Link>
-      <Link href="/produtos">Produtos</Link>
-      <Link href="/sobre">Sobre</Link>
-      <Link href="/contato">Contato</Link>
+      <Link href="/" className={linkAtivo == "/" ? "ativo" : ""}>
+        Blog
+      </Link>
+      <Link
+        href="/produtos"
+        className={linkAtivo == "/produtos" ? "ativo" : ""}
+      >
+        Produtos
+      </Link>
+      <Link href="/sobre" className={linkAtivo == "/sobre" ? "ativo" : ""}>
+        Sobre
+      </Link>
+      <Link href="/contato" className={linkAtivo == "/contato" ? "ativo" : ""}>
+        Contato
+      </Link>
     </StyledNav>
   );
 }
