@@ -30,7 +30,7 @@ const StyledNav = styled.nav`
     }
 
     &.ativo {
-      background-color: lightslategray;
+      background-color: blacky;
     }
 
     @media screen and (min-width: 700px) {
