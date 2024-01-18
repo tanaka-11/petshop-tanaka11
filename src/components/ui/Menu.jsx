@@ -48,15 +48,18 @@ export default function Menu() {
       <Link href="/" className={linkAtivo == "/" ? "ativo" : ""}>
         Blog
       </Link>
+
       <Link
         href="/produtos"
         className={linkAtivo == "/produtos" ? "ativo" : ""}
       >
         Produtos
       </Link>
+
       <Link href="/sobre" className={linkAtivo == "/sobre" ? "ativo" : ""}>
         Sobre
       </Link>
+
       <Link href="/contato" className={linkAtivo == "/contato" ? "ativo" : ""}>
         Contato
       </Link>
