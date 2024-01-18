@@ -24,19 +24,21 @@ const StyledHeader = styled.header`
 export default function Cabecalho() {
   return (
     <StyledHeader>
-      <h1>
-        <Link href="/">
-          <Image
-            src="/images/logo.png"
-            width={48}
-            height={48}
-            alt="Logo do Petshop"
-          />
-          PetShop
-        </Link>
-      </h1>
+      <div className="limitador">
+        <h1>
+          <Link href="/">
+            <Image
+              src="/images/logo.png"
+              width={48}
+              height={48}
+              alt="Logo do Petshop"
+            />
+            PetShop
+          </Link>
+        </h1>
 
-      <Menu />
+        <Menu />
+      </div>
     </StyledHeader>
   );
 }
