@@ -8,7 +8,7 @@
 - Rotas
 - Map, Filter
 - Manipulação de formulário
-- PUblicação na Vercel e Netlify
+- Publicação na Vercel e Netlify
 
 ### Lembretes
 
