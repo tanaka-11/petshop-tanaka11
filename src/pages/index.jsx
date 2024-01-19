@@ -71,7 +71,7 @@ export default function Home() {
               <article key={post.id}>
                 <Link href="">
                   <h3>{post.titulo}</h3>
-                  <p>{post.titulo}</p>
+                  <p>{post.subtitulo}</p>
                 </Link>
               </article>
             );
