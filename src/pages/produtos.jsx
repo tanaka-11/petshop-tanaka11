@@ -7,6 +7,19 @@ const StyledProdutos = styled.section`
   h2::before {
     content: "🎁 ";
   }
+
+  article {
+    padding: 0.8rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    div {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      font-size: 1.3rem;
+    }
+  }
 `;
 
 export default function Produtos() {
