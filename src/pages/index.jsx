@@ -66,33 +66,16 @@ export default function Home() {
         <h2>Pet Notícias</h2>
 
         <StyledListaPosts>
-          <article>
-            <Link href="">
-              <h3>Titulo 1</h3>
-              <p>Subtitulo 1</p>
-            </Link>
-          </article>
-
-          <article>
-            <Link href="">
-              <h3>Titulo 2</h3>
-              <p>Subtitulo 2</p>
-            </Link>
-          </article>
-
-          <article>
-            <Link href="">
-              <h3>Titulo 3</h3>
-              <p>Subtitulo 3</p>
-            </Link>
-          </article>
-
-          <article>
-            <Link href="">
-              <h3>Titulo 4</h3>
-              <p>Subtitulo 4</p>
-            </Link>
-          </article>
+          {arrayPosts.map((post) => {
+            return (
+              <article key={post.id}>
+                <Link href="">
+                  <h3>{post.titulo}</h3>
+                  <p>{post.titulo}</p>
+                </Link>
+              </article>
+            );
+          })}
         </StyledListaPosts>
       </StyledHome>
     </>
