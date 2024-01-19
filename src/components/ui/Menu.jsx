@@ -43,21 +43,21 @@ const StyledNav = styled.nav`
 export default function Menu() {
   const linkAtivo = usePathname();
 
+  // Função que faz a comparação dado o parametro "/..." e realiza a condicional
+  const verificaAtivo = (path) => (linkAtivo === path ? "ativo" : "");
+
   return (
     <StyledNav>
-      <Link href="/" className={linkAtivo == "/" ? "ativo" : ""}>
+      <Link href="/" className={verificaAtivo("/")}>
         Blog
       </Link>
-      <Link
-        href="/produtos"
-        className={linkAtivo == "/produtos" ? "ativo" : ""}
-      >
+      <Link href="/produtos" className={verificaAtivo("/produtos")}>
         Produtos
       </Link>
-      <Link href="/sobre" className={linkAtivo == "/sobre" ? "ativo" : ""}>
+      <Link href="/sobre" className={verificaAtivo("/sobre")}>
         Sobre
       </Link>
-      <Link href="/contato" className={linkAtivo == "/contato" ? "ativo" : ""}>
+      <Link href="/contato" className={verificaAtivo("/contato")}>
         Contato
       </Link>
     </StyledNav>
