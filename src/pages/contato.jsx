@@ -14,7 +14,6 @@ const StyledContato = styled.section`
     margin: 0.3rem;
     padding: 0.8rem;
     font-weight: bold;
-    font-size: 20px;
 
     & input,
     & textarea {
@@ -30,7 +29,6 @@ const StyledContato = styled.section`
       color: var(--cor-primaria);
       padding: 0.8rem;
       border-radius: var(--borda-arredondada);
-      font-size: 20px;
       cursor: pointer;
 
       &:hover,
