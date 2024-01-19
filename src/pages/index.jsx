@@ -29,6 +29,7 @@ export default function Home() {
       <StyledHome>
         <h2>Pet Notícias</h2>
 
+        {/* Passado o array atraves de uma props */}
         <ListaPosts posts={arrayPosts} />
       </StyledHome>
     </>
