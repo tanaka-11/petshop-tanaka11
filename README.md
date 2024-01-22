@@ -14,3 +14,7 @@
 
 - Instalar `npm install styled-components`
 - Configurar o next.config para renderização do styled-component
+
+### Lembrete sobre o JSON server
+
+- Instalar `npm install -g json-server`
