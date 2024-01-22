@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
 import ListaPosts from "@/components/ListaPosts";
-import arrayPosts from "./api/array-posts";
 
 // CSS
 const StyledHome = styled.section`
