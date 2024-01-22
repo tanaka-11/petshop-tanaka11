@@ -17,6 +17,10 @@ export default function Home() {
     const carregarDados = async () => {
       try {
         const resposta = await fetch(`http://10.20.46.32:2112/posts`);
+
+        if (!resposta.ok) {
+          throw new Error(`Erro: ${resposta.status} - ${resposta.statusText}`);
+        }
         const dados = await resposta.json();
         setlistaDePosts(dados);
       } catch (error) {
