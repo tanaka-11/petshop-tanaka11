@@ -28,16 +28,8 @@ export default function Home() {
       <StyledHome>
         <h2>Pet Notícias</h2>
 
-        {/* Passado o array atraves de uma props */}
-        <ListaPosts
-          posts={[
-            {
-              id: 1,
-              titulo: "Banho no catiorrinho",
-              subtitulo: "Use as utensilios certos para banhar seu cão",
-            },
-          ]}
-        />
+        {/* Passado props personalizada */}
+        <ListaPosts posts={[]} />
       </StyledHome>
     </>
   );
