@@ -2,6 +2,7 @@ import Head from "next/head";
 import styled from "styled-components";
 import ListaPosts from "@/components/ListaPosts";
 import { useState } from "react";
+import serverApi from "./api/server";
 
 // CSS
 const StyledHome = styled.section`
@@ -15,7 +16,7 @@ const StyledHome = styled.section`
 export async function getStaticProps() {
   try {
     // Conexão com a API
-    const resposta = await fetch(`http://10.20.46.32:2112/posts`);
+    const resposta = await fetch(`${serverApi}/posts`);
     const dados = await resposta.json();
 
     // Tratativa de erro na resposta
