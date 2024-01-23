@@ -47,6 +47,7 @@ export async function getStaticPaths() {
 
 export default function Post({ post }) {
   const tituloPagina = `${post.titulo} - Petshop`;
+
   return (
     <>
       <Head>
