@@ -45,8 +45,18 @@ Após o processamento da função de SSR(Server Side Rendering), a `getStaticPro
 
 Pode ser útil para páginas cujos dados mudam frequentemente ou são diferentes para cada usuário (como no uso de dados de geolocalização) tendo a mesma utilização porem com propositos diferentes.
 
+#### Sobre a função getStaticPaths
+
+Utilizado para pre-renderizar páginas que usam rotas dinâmicas
+
 ---
 
 ### Sobre Rota Dinâmica do Next.js
 
 - Criar uma pasta dentro de `pages` com o nome da página e criar um arquivo dentro da pasta criada com o nome do parâmetro entre []. Ex. página `posts` e parâmetro `[id].jsx`, então criamos a pasta `posts` e dentro dela o arquivo `[id].jsx`
+
+---
+
+### Site para teste de SEO
+
+https://pagespeed.web.dev/
