@@ -49,7 +49,7 @@ export default function Post({ post }) {
   return (
     <>
       <Head>
-        <title>Titulo - PetShop</title>
+        <title>{post.titulo} - PetShop</title>
         <meta name="description" content={post.descricao} />
       </Head>
 
