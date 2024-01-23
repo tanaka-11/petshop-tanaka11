@@ -37,6 +37,10 @@
 
 https://nextjs.org/docs/pages/building-your-application/data-fetching
 
-#### Sobre o getStaticProps
+#### Sobre a função getStaticProps
 
-Após o processamento(desde que não haja erros) da função de SSR(Server Side Rendering), a getStaticProps retorna uma propriedade chamada "props", e nesta colocamos um objeto com as props que queremos usar. Podendo ser nomeada com qualquer nome e é na props que passamos os dados do fetch da API.
+Após o processamento da função de SSR(Server Side Rendering), a `getStaticProps` retorna uma propriedade chamada "props", e nesta colocamos um objeto com as props que queremos usar. Podendo ser nomeada com qualquer nome e é na props que passamos os dados do fetch da API.
+
+#### Sobre a função getServerSideProps
+
+Pode ser útil para páginas cujos dados mudam frequentemente ou são diferentes para cada usuário (como no uso de dados de geolocalização) tendo a mesma utilização porem com propositos diferentes.
