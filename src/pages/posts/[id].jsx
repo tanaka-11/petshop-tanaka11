@@ -3,7 +3,11 @@ import Head from "next/head";
 import styled from "styled-components";
 
 // CSS
-const StyledPost = styled.article``;
+const StyledPost = styled.article`
+  h2::before {
+    content: "📌 ";
+  }
+`;
 
 export default function Post() {
   return (
