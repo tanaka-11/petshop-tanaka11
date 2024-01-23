@@ -9,6 +9,20 @@ const StyledPost = styled.article`
   }
 `;
 
+// Funções de Servidor
+// Obs. Obrigatorio ser exportada e async. Não importa-la pois causa erro de falha de compilação.
+export async function getStaticProps({ params }) {
+  const { id } = params;
+  console.log(id);
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: "blocking",
+  };
+}
+
 export default function Post() {
   return (
     <>
