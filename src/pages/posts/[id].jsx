@@ -45,20 +45,20 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post() {
+export default function Post({ post }) {
   return (
     <>
       <Head>
         <title>Titulo - PetShop</title>
-        <meta name="description" content="Descrição" />
+        <meta name="description" content={post.descricao} />
       </Head>
 
       <StyledPost>
-        <h2>Titulo...</h2>
+        <h2>{post.titulo}</h2>
 
         <Container>
-          <h3>Categoria...</h3>
-          <p>Descrição...</p>
+          <h3>{post.categoria}</h3>
+          <p>{post.descricao}</p>
         </Container>
       </StyledPost>
     </>
