@@ -11,6 +11,7 @@ const StyledHome = styled.section`
 `;
 
 export default function Home() {
+  // Hooks
   const [listaDePosts, setlistaDePosts] = useState([]);
 
   useEffect(() => {
