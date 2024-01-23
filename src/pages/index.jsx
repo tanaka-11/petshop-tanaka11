@@ -11,7 +11,7 @@ const StyledHome = styled.section`
   }
 `;
 
-// Funções de Servidor(Back-End, SSR)
+// Função de Servidor(Back-End, SSR)
 // Obs. Obrigatorio ser exportada e async. Não importa-la pois causa erro de falha de compilação.
 export async function getStaticProps() {
   try {
