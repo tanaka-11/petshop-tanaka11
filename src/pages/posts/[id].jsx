@@ -10,7 +10,7 @@ const StyledPost = styled.article`
   }
 `;
 
-// Funções de Servidor
+// Funções de Servidor com Parametro
 // Obs. Obrigatorio ser exportada e async. Não importa-la pois causa erro de falha de compilação.
 export async function getStaticProps({ params }) {
   const { id } = params;
