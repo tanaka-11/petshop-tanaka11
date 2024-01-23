@@ -1,6 +1,7 @@
 import Container from "@/components/ui/Container";
 import Head from "next/head";
 import styled from "styled-components";
+import serverApi from "../api/server";
 
 // CSS
 const StyledPost = styled.article`
@@ -13,7 +14,28 @@ const StyledPost = styled.article`
 // Obs. Obrigatorio ser exportada e async. Não importa-la pois causa erro de falha de compilação.
 export async function getStaticProps({ params }) {
   const { id } = params;
-  console.log(id);
+
+  try {
+    // Conexão com a API e Rota Dinamica
+    const resposta = await fetch(`${serverApi}/posts/${id}`);
+
+    // Tratativa de erro na resposta
+    if (!resposta.ok) {
+      throw new Error(`Erro: ${resposta.status} - ${resposta.statusText}`);
+    }
+
+    // Guardando os dados em formato json()
+    const dados = await resposta.json();
+
+    // Comunicação com o componente atraves de um objeto de props
+    return {
+      props: {
+        post: dados,
+      },
+    };
+  } catch (error) {
+    console.error("Erro de conexão: " + error.message);
+  }
 }
 
 export async function getStaticPaths() {
