@@ -4,6 +4,7 @@ import ListaPosts from "@/components/ListaPosts";
 import { useState } from "react";
 
 // Funções de Servidor(Back-End) - Obrigatorio ser exportada e async.
+// Obs. Não importa-la pois causa erro de falha de compilação.
 export async function getStaticProps() {
   try {
     // Conexão com a API
