@@ -3,8 +3,15 @@ import styled from "styled-components";
 import ListaPosts from "@/components/ListaPosts";
 import { useState } from "react";
 
-// Funções de Servidor(Back-End, SSR) - Obrigatorio ser exportada e async.
-// Obs. Não importa-la pois causa erro de falha de compilação.
+// CSS
+const StyledHome = styled.section`
+  h2::before {
+    content: "📰 ";
+  }
+`;
+
+// Funções de Servidor(Back-End, SSR)
+// Obs. Obrigatorio ser exportada e async. Não importa-la pois causa erro de falha de compilação.
 export async function getStaticProps() {
   try {
     // Conexão com a API
@@ -26,13 +33,6 @@ export async function getStaticProps() {
     console.error("Erro de conexão: " + error.message);
   }
 }
-
-// CSS
-const StyledHome = styled.section`
-  h2::before {
-    content: "📰 ";
-  }
-`;
 
 export default function Home({ posts }) {
   // Hooks
