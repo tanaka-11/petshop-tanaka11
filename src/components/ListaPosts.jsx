@@ -39,7 +39,7 @@ const StyledListaPosts = styled.div`
 `;
 
 export default function ListaPosts({ posts }) {
-  // Criando condicional caso a props.posts esteja vazio
+  // Condicional caso a props.posts esteja vazio
   if (posts.length === 0)
     return (
       <h3 style={{ textAlign: "center" }}>Sem posts disponíveis no momento.</h3>
