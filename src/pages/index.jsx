@@ -96,13 +96,24 @@ export default function Home({ posts, categorias }) {
 
   // Filtro
   const aplicarFiltro = (event) => {
+    // Selecionando a categoria
     const categoriaSelecionada = event.currentTarget.textContent;
 
+    // Filtrando
     const listaDePostFiltrados = posts.filter(
       (post) => post.categoria === categoriaSelecionada
     );
-
     setlistaDePosts(listaDePostFiltrados);
+
+    // State do Filtro
+    setfiltroAtivo(true);
+  };
+
+  const limparFiltro = () => {
+    // State do Filtro
+    setfiltroAtivo(false);
+    // Passando dados com a props desestruturada vinda da API
+    setlistaDePosts(posts);
   };
 
   return (
@@ -124,6 +135,7 @@ export default function Home({ posts, categorias }) {
         <h2>Pet Notícias</h2>
 
         <StyledCategorias>
+          {/* Botão de categorias */}
           {categorias.map((categoria, indice) => {
             return (
               <button key={indice} onClick={aplicarFiltro}>
@@ -133,7 +145,11 @@ export default function Home({ posts, categorias }) {
           })}
 
           {/* Limpa filtro com renderização condicional */}
-          {filtroAtivo && <button className="botaoLimpar">Limpar</button>}
+          {filtroAtivo && (
+            <button className="botaoLimpar" onClick={limparFiltro}>
+              Limpar
+            </button>
+          )}
         </StyledCategorias>
 
         {/* Passado props personalizada */}
