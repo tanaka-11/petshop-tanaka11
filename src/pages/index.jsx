@@ -17,17 +17,23 @@ export async function getStaticProps() {
   try {
     // Conexão com a API
     const resposta = await fetch(`${serverApi}/posts`);
-    const dados = await resposta.json();
 
     // Tratativa de erro na resposta
     if (!resposta.ok) {
       throw new Error(`Erro: ${resposta.status} - ${resposta.statusText}`);
     }
 
+    // Guardando os dados em formato json()
+    const dados = await resposta.json();
+
+    // Extração das categorias
+    const categorias = dados.map((post) => post.categoria);
+
     // Comunicação com o componente atraves de um objeto de props
     return {
       props: {
         posts: dados,
+        categorias: [],
       },
     };
   } catch (error) {
@@ -40,7 +46,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ posts }) {
+export default function Home({ posts, categorias }) {
   // Hooks
   const [listaDePosts, setlistaDePosts] = useState(posts);
 
