@@ -36,6 +36,11 @@ export async function getStaticProps({ params }) {
     };
   } catch (error) {
     console.error("Erro de conexão: " + error.message);
+
+    // Return com Flag "notFound" para rota dinamica
+    return {
+      notFound: true,
+    };
   }
 }
 
