@@ -10,6 +10,12 @@
 - Manipulação de formulário
 - Publicação na Vercel e Netlify
 
+---
+
+### Site para teste de SEO
+
+https://pagespeed.web.dev/
+
 ### Lembrete sobre o styled-component
 
 - Instalar `npm install styled-components`
@@ -37,6 +43,12 @@
 
 https://nextjs.org/docs/pages/building-your-application/data-fetching
 
+#### Sobre Rota Dinâmica do Next.js
+
+Criar uma pasta dentro de `pages` com o nome da página e criar um arquivo dentro da pasta criada com o nome do parâmetro entre []. Ex. página `posts` e parâmetro `[id].jsx`, então criamos a pasta `posts` e dentro dela o arquivo `[id].jsx`
+
+**Obs. As funções abaixo so funcionam com o uso das rotas dinâmicas.**
+
 #### Sobre a função getStaticProps
 
 Após o processamento da função de SSR(Server Side Rendering), a `getStaticProps` retorna uma propriedade chamada "props", e nesta colocamos um objeto com as props que queremos usar. Podendo ser nomeada com qualquer nome e é na props que passamos os dados do fetch da API.
@@ -47,16 +59,6 @@ Pode ser útil para páginas cujos dados mudam frequentemente ou são diferentes
 
 #### Sobre a função getStaticPaths
 
-Utilizado para pre-renderizar páginas que usam rotas dinâmicas
+Utilizado para pre-renderizar páginas que usam rotas dinâmicas e dependem de parâmeteros(params) do `getStaticProps` para serem construídas.
 
 ---
-
-### Sobre Rota Dinâmica do Next.js
-
-- Criar uma pasta dentro de `pages` com o nome da página e criar um arquivo dentro da pasta criada com o nome do parâmetro entre []. Ex. página `posts` e parâmetro `[id].jsx`, então criamos a pasta `posts` e dentro dela o arquivo `[id].jsx`
-
----
-
-### Site para teste de SEO
-
-https://pagespeed.web.dev/
