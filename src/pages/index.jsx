@@ -28,6 +28,7 @@ export async function getStaticProps() {
 
     // Extração das categorias
     const categorias = dados.map((post) => post.categoria);
+
     // Gerando um novo array de categorias sem repetição com o Set()
     const categoriasUnica = [...new Set(categorias)];
 
@@ -48,6 +49,7 @@ export async function getStaticProps() {
   }
 }
 
+// Componente
 export default function Home({ posts, categorias }) {
   // Hooks
   const [listaDePosts, setlistaDePosts] = useState(posts);
@@ -69,6 +71,12 @@ export default function Home({ posts, categorias }) {
 
       <StyledHome>
         <h2>Pet Notícias</h2>
+
+        <div>
+          {categorias.map((categoria) => {
+            return <button>{categoria}</button>;
+          })}
+        </div>
 
         {/* Passado props personalizada */}
         <ListaPosts posts={listaDePosts} />
