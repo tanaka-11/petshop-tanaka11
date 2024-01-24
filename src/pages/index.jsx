@@ -92,6 +92,8 @@ export default function Home({ posts, categorias }) {
   // Hooks
   const [listaDePosts, setlistaDePosts] = useState(posts);
 
+  const [filtroAtivo, setfiltroAtivo] = useState(false);
+
   // Filtro
   const aplicarFiltro = (event) => {
     const categoriaSelecionada = event.currentTarget.textContent;
@@ -130,8 +132,8 @@ export default function Home({ posts, categorias }) {
             );
           })}
 
-          {/* Limpa Filtro */}
-          <button className="botaoLimpar">Limpar</button>
+          {/* Limpa filtro com renderização condicional */}
+          {filtroAtivo && <button className="botaoLimpar">Limpar</button>}
         </StyledCategorias>
 
         {/* Passado props personalizada */}
