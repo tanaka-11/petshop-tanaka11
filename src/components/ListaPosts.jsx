@@ -22,7 +22,7 @@ const StyledListaPosts = styled.div`
 
       &:hover,
       &:focus {
-        color: #0d0da7;
+        color: #151594;
       }
     }
   }
