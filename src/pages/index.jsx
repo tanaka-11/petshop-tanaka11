@@ -16,11 +16,10 @@ const StyledCategorias = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 1rem;
-  font-size: 20px;
 
   button {
     background-color: #4ba3c3;
-    color: white;
+    color: #fff;
     border-radius: 8px;
     padding: 0.8rem;
     border: none;
@@ -29,9 +28,8 @@ const StyledCategorias = styled.div`
 
     &:hover,
     &:focus {
-      background-color: #b3d7f5;
-      color: #151577;
-      font-weight: bold;
+      background-color: #246177;
+      color: #f7f7f7;
     }
   }
 `;
