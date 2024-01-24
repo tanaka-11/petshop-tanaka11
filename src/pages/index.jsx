@@ -15,13 +15,15 @@ const StyledCategorias = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 1rem;
+  margin: 1rem 0;
+  /* padding: 0.8rem; */
 
   button {
     background-color: #4ba3c3;
     color: #fff;
     border-radius: 8px;
     padding: 0.8rem;
+    /* margin: 0.3rem; */
     border: none;
     text-transform: capitalize;
     cursor: pointer;
@@ -30,6 +32,19 @@ const StyledCategorias = styled.div`
     &:focus {
       background-color: #246177;
       color: #f7f7f7;
+    }
+
+    &.botaoLimpar {
+      background-color: #8d0505c9;
+
+      &:hover,
+      &:focus {
+        background-color: darkred;
+      }
+
+      &::before {
+        content: " 🧹";
+      }
     }
   }
 `;
@@ -114,6 +129,9 @@ export default function Home({ posts, categorias }) {
               </button>
             );
           })}
+
+          {/* Limpa Filtro */}
+          <button className="botaoLimpar">Limpar</button>
         </StyledCategorias>
 
         {/* Passado props personalizada */}
