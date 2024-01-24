@@ -11,6 +11,30 @@ const StyledHome = styled.section`
   }
 `;
 
+const StyledCategorias = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 1rem;
+
+  button {
+    background-color: #151577;
+    color: white;
+    border-radius: 8px;
+    padding: 0.8rem;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: #b3d7f5;
+      color: #151577;
+      font-weight: bold;
+    }
+  }
+`;
+
 // Função de Servidor(Back-End, SSR)
 // Obs. Obrigatorio ser exportada e async. Não importa-la pois causa erro de falha de compilação.
 export async function getStaticProps() {
@@ -54,6 +78,16 @@ export default function Home({ posts, categorias }) {
   // Hooks
   const [listaDePosts, setlistaDePosts] = useState(posts);
 
+  // Filtro
+  // const aplicarFiltro = (event) => {
+  //   const categoriaSelecionada = event.currentTarget.innerText;
+  //   setlistaDePosts(categoriaSelecionada);
+  // };
+
+  // const categoriasFiltradas = categorias.filter(
+  //   (categoriaFiltrada) => categoriaFiltrada.categorias
+  // );
+
   return (
     <>
       <Head>
@@ -72,11 +106,11 @@ export default function Home({ posts, categorias }) {
       <StyledHome>
         <h2>Pet Notícias</h2>
 
-        <div>
+        <StyledCategorias>
           {categorias.map((categoria, indice) => {
             return <button key={indice}>{categoria}</button>;
           })}
-        </div>
+        </StyledCategorias>
 
         {/* Passado props personalizada */}
         <ListaPosts posts={listaDePosts} />
