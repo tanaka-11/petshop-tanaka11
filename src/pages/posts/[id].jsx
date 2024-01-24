@@ -47,6 +47,8 @@ export async function getStaticProps({ params }) {
 // Função obrigatoria para rota dinâmica
 export async function getStaticPaths() {
   // Retorna objeto com dois parametros
+  // 1º - "paths" que inicializa vazio e é gerado o caminho no momento que a pagina for aberta.
+  // 2º - "fallback" garante que a pagina so vai ser renderizada apos a conclusão da geração da pagina.
   return {
     paths: [],
     fallback: "blocking",
