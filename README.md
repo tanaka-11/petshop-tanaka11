@@ -16,6 +16,8 @@
 
 https://pagespeed.web.dev/
 
+---
+
 ### Lembrete sobre o styled-component
 
 - Instalar `npm install styled-components`
