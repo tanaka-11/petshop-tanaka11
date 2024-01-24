@@ -25,15 +25,16 @@ const StyledContato = styled.section`
     }
 
     & button {
-      background-color: var(--cor-primaria-fundo);
-      color: var(--cor-primaria);
+      background-color: var(--cor-secundaria-fundo);
+      color: #f7f7f7;
       padding: 0.8rem;
       border-radius: var(--borda-arredondada);
       cursor: pointer;
+      border: none;
 
       &:hover,
       &:focus {
-        background-color: var(--cor-primaria-fundo-hover);
+        background-color: var(--cor-secundaria-fundo-hover);
       }
     }
   }
