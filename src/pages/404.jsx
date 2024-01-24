@@ -8,6 +8,8 @@ const Styled404 = styled.section`
   text-align: center;
   img {
     max-width: 100%;
+    width: auto;
+    height: auto;
   }
   h2::before {
     content: "🙀 ";
@@ -31,6 +33,7 @@ export default function Pagina404() {
             width={500}
             height={269}
             alt="Ilustração de um cachorrinho"
+            priority
           />
         </Container>
       </Styled404>
