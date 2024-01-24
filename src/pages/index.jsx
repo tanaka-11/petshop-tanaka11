@@ -16,9 +16,10 @@ const StyledCategorias = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 1rem;
+  font-size: 20px;
 
   button {
-    background-color: #151577;
+    background-color: #4ba3c3;
     color: white;
     border-radius: 8px;
     padding: 0.8rem;
@@ -79,14 +80,15 @@ export default function Home({ posts, categorias }) {
   const [listaDePosts, setlistaDePosts] = useState(posts);
 
   // Filtro
-  // const aplicarFiltro = (event) => {
-  //   const categoriaSelecionada = event.currentTarget.innerText;
-  //   setlistaDePosts(categoriaSelecionada);
-  // };
+  const aplicarFiltro = (event) => {
+    const categoriaSelecionada = event.currentTarget.textContent;
 
-  // const categoriasFiltradas = categorias.filter(
-  //   (categoriaFiltrada) => categoriaFiltrada.categorias
-  // );
+    const listaDePostFiltrados = posts.filter(
+      (post) => post.categoria === categoriaSelecionada
+    );
+
+    setlistaDePosts(listaDePostFiltrados);
+  };
 
   return (
     <>
@@ -108,7 +110,11 @@ export default function Home({ posts, categorias }) {
 
         <StyledCategorias>
           {categorias.map((categoria, indice) => {
-            return <button key={indice}>{categoria}</button>;
+            return (
+              <button key={indice} onClick={aplicarFiltro}>
+                {categoria}
+              </button>
+            );
           })}
         </StyledCategorias>
 
