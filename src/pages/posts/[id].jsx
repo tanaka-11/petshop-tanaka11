@@ -13,7 +13,7 @@ const StyledPost = styled.article`
 // Funções de Servidor com Parametro
 // Obs. Obrigatorio ser exportada e async. Não importa-la pois causa erro de falha de compilação.
 export async function getStaticProps({ params }) {
-  // Parametro
+  // Parametro com Props Desestruturado
   const { id } = params;
 
   try {
@@ -44,7 +44,9 @@ export async function getStaticProps({ params }) {
   }
 }
 
+// Função obrigatoria para rota dinâmica
 export async function getStaticPaths() {
+  // Retorna objeto com dois parametros
   return {
     paths: [],
     fallback: "blocking",
