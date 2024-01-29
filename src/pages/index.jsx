@@ -33,6 +33,12 @@ const StyledCategorias = styled.div`
       color: #f7f7f7;
     }
 
+    /* Classe para destaque do botão selecionado */
+    &.ativo {
+      background-color: #246177;
+    }
+
+    /* Classe para o botão limpar */
     &.botaoLimpar {
       background-color: #8d0505c9;
 
@@ -89,8 +95,9 @@ export async function getStaticProps() {
 // Componente
 export default function Home({ posts, categorias }) {
   // Hooks
-  const [listaDePosts, setlistaDePosts] = useState(posts);
-  const [filtroAtivo, setfiltroAtivo] = useState(false);
+  const [listaDePosts, setListaDePosts] = useState(posts);
+  const [filtroAtivo, setFiltroAtivo] = useState(false);
+  const [categoriaAtiva, setCategoriaAtiva] = useState("");
 
   // Filtro
   const aplicarFiltro = (event) => {
@@ -101,17 +108,18 @@ export default function Home({ posts, categorias }) {
     const listaDePostFiltrados = posts.filter(
       (post) => post.categoria === categoriaSelecionada
     );
-    setlistaDePosts(listaDePostFiltrados);
 
-    // State do Filtro
-    setfiltroAtivo(true);
+    // States da Categoria
+    setFiltroAtivo(true); // Boolean para saber se o filtro está "ativo"
+    setListaDePosts(listaDePostFiltrados); // Atualização dos posts se filtro estiver "ativo"
+    setCategoriaAtiva(categoriaSelecionada); // Categoria selecionada pelo botão
   };
 
   const limparFiltro = () => {
     // State do Filtro
-    setfiltroAtivo(false);
-    // Passando dados com a props desestruturada vinda da API
-    setlistaDePosts(posts);
+    setFiltroAtivo(false); // Boolean para saber se o filtro está "desativado"
+    setListaDePosts(posts); // Atualização dos posts se filtro estiver "desativado" (volte mostrar todos posts)
+    setCategoriaAtiva(""); // Voltando para nenhuma categoria selecionada pelo botão
   };
 
   return (
@@ -136,7 +144,11 @@ export default function Home({ posts, categorias }) {
           {/* Botão de categorias */}
           {categorias.map((categoria, indice) => {
             return (
-              <button key={indice} onClick={aplicarFiltro}>
+              <button
+                key={indice} // Indice(ID) do botão atraves do parametro
+                className={categoria === categoriaAtiva ? "ativo" : ""} // Programação de destaque do botão
+                onClick={aplicarFiltro} // Aplicação do filtro
+              >
                 {categoria}
               </button>
             );
