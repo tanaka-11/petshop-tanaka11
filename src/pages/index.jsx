@@ -91,7 +91,6 @@ export async function getStaticProps() {
 export default function Home({ posts, categorias }) {
   // Hooks
   const [listaDePosts, setlistaDePosts] = useState(posts);
-
   const [filtroAtivo, setfiltroAtivo] = useState(false);
 
   // Filtro

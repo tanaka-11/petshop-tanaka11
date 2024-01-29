@@ -8,6 +8,10 @@ const StyledPost = styled.article`
   h2::before {
     content: "📌 ";
   }
+
+  h3 {
+    text-transform: capitalize;
+  }
 `;
 
 // Funções de Servidor com Parametro
