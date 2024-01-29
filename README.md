@@ -12,6 +12,18 @@
 
 ---
 
+### Link do DataBase (NoSQL) via Firebase
+
+https://petshop-tanaka11-default-rtdb.firebaseio.com/
+
+---
+
+### Site de conversões para Firebase
+
+https://tableconvert.com/json-to-firebase
+
+---
+
 ### Site para teste de SEO
 
 https://pagespeed.web.dev/
