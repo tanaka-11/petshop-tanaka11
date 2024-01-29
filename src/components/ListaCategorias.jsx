@@ -47,8 +47,8 @@ export default function ListaCategorias({
   categorias,
   categoriaAtiva,
   filtroAtivo,
-  aplicarFiltro,
-  limparFiltro,
+  onAplicarFiltro,
+  onLimparFiltro,
 }) {
   return (
     <StyledCategorias>
@@ -58,7 +58,7 @@ export default function ListaCategorias({
           <button
             key={indice} // Indice(ID) do botão atraves do parametro
             className={categoria === categoriaAtiva ? "ativo" : ""} // Programação de destaque do botão
-            onClick={aplicarFiltro} // Aplicação do filtro
+            onClick={onAplicarFiltro} // Aplicação do filtro
           >
             {categoria}
           </button>
@@ -67,7 +67,7 @@ export default function ListaCategorias({
 
       {/* Limpa filtro com renderização condicional */}
       {filtroAtivo && (
-        <button className="botaoLimpar" onClick={limparFiltro}>
+        <button className="botaoLimpar" onClick={onLimparFiltro}>
           Limpar
         </button>
       )}

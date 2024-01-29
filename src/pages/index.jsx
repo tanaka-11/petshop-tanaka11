@@ -102,8 +102,8 @@ export default function Home({ posts, categorias }) {
           categorias={categorias}
           categoriaAtiva={categoriaAtiva}
           filtroAtivo={filtroAtivo}
-          aplicarFiltro={aplicarFiltro}
-          limparFiltro={limparFiltro}
+          onAplicarFiltro={aplicarFiltro} // props com função
+          onLimparFiltro={limparFiltro} // props com função
         />
 
         {/* Passado props personalizada */}
