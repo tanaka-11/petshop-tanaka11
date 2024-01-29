@@ -101,7 +101,7 @@ export default function Home({ posts, categorias }) {
 
   // Filtro
   const aplicarFiltro = (event) => {
-    // Selecionando a categoria
+    // Selecionando a categoria e passando a escrita do botão
     const categoriaSelecionada = event.currentTarget.textContent;
 
     // Filtrando
@@ -111,7 +111,7 @@ export default function Home({ posts, categorias }) {
 
     // States da Categoria
     setFiltroAtivo(true); // Boolean para saber se o filtro está "ativo"
-    setListaDePosts(listaDePostFiltrados); // Atualização dos posts se filtro estiver "ativo"
+    setListaDePosts(listaDePostFiltrados); // Atualização dos posts se filtro estiver "ativo" (Selecionar posts da categoria escrita no botão)
     setCategoriaAtiva(categoriaSelecionada); // Categoria selecionada pelo botão
   };
 
