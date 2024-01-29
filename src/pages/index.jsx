@@ -16,14 +16,13 @@ const StyledCategorias = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 1rem 0;
-  /* padding: 0.8rem; */
 
   button {
     background-color: #4ba3c3;
     color: #fff;
     border-radius: 8px;
     padding: 0.8rem;
-    /* margin: 0.3rem; */
+    margin: 0.3rem;
     border: none;
     text-transform: capitalize;
     cursor: pointer;
