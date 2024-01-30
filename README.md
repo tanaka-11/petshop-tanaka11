@@ -18,7 +18,7 @@ https://petshop-tanaka11-default-rtdb.firebaseio.com/ - Link do Database
 
 Firebase é uma plataforma de serviços web com uma série de funcionalidades de Back-End úteis para aplicações (web, app e jogos). No caso do projeto utilizamos o firebase para adicionar um database chamado "Firebase Realtime Database" para utilização como API JSON. Ele funciona como um **Database não relacional(NoSQL)**, ou seja, baseado em documentos(objetos) no formato JSON.
 
-**_Obs. para teste utilizamos a extensão Thunder Client_**
+**_Obs. para teste utilizamos a extensão Thunder Client_** e não é necessario mais a utilização do Node Command Prompt para inicialização da API.
 
 Como estamos utilizando uma API JSON podemos utilizar os verbos HTTP no padrão REST:
 
