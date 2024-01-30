@@ -1,6 +1,7 @@
 import Container from "@/components/ui/Container";
 import Head from "next/head";
 import styled from "styled-components";
+import { useForm } from "react-hook-form";
 
 // CSS
 const StyledContato = styled.section`
@@ -41,6 +42,12 @@ const StyledContato = styled.section`
 `;
 
 export default function Contato() {
+  //
+  const { register, handleSubmit } = useForm();
+  const enviarContato = () => {
+    console.log("Enviando 🐾");
+  };
+
   return (
     <>
       <Head>
@@ -59,12 +66,24 @@ export default function Contato() {
           <form action="" method="post" autoComplete="off">
             <div>
               <label htmlFor="nome">Nome </label>
-              <input type="text" name="nome" id="nome" required />
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                required
+                {...register("nome")}
+              />
             </div>
 
             <div>
               <label htmlFor="email">E-mail </label>
-              <input type="email" name="email" id="email" required />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                {...register("email")}
+              />
             </div>
 
             <div>
@@ -77,6 +96,7 @@ export default function Contato() {
                 cols="30"
                 rows="8"
                 required
+                {...register("mensagem")}
               ></textarea>
             </div>
 
