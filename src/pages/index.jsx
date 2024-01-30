@@ -38,17 +38,15 @@ export async function getStaticProps() {
       };
     });
 
-    console.log(arrayDePosts);
-
     // Extração das categorias
-    const categorias = dados.map((post) => post.categoria);
+    const categorias = arrayDePosts.map((post) => post.categoria);
     // Gerando um novo array de categorias sem repetição com o Set()
     const categoriasUnica = [...new Set(categorias)];
 
     // Comunicação com o componente atraves de um objeto de props
     return {
       props: {
-        posts: dados,
+        posts: arrayDePosts,
         categorias: categoriasUnica,
       },
     };
