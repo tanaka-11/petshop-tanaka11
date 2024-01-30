@@ -22,11 +22,11 @@ Firebase é uma plataforma de serviços web com uma série de funcionalidades de
 
 Como estamos utilizando uma API JSON podemos utilizar os verbos HTTP no padrão REST:
 
-- GET - Obter Dados
-- POST - Criar Dados
-- PUT - Atualizar Todos os Dados
-- PATCH - Atualizar Alguns Dados
-- DELETE - Deletar Dados
+- **GET** - Obter Dados
+- **POST** - Criar Dados
+- **PUT** - Atualizar Todos os Dados
+- **PATCH** - Atualizar Alguns Dados
+- **DELETE** - Deletar Dados
 
 ---
 
