@@ -22,7 +22,7 @@ export async function getStaticProps({ params }) {
 
   try {
     // Conexão com a API e Rota Dinamica
-    const resposta = await fetch(`${serverApi}/posts/${id}`);
+    const resposta = await fetch(`${serverApi}/posts/${id}.json`);
 
     // Tratativa de erro na resposta
     if (!resposta.ok) {
