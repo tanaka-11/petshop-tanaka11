@@ -11,6 +11,7 @@ const Styled404 = styled.section`
     width: auto;
     height: auto;
   }
+
   h2::before {
     content: "🙀 ";
   }
