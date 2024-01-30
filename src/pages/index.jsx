@@ -19,17 +19,29 @@ export async function getStaticProps() {
     // Conexão com a API
     const resposta = await fetch(`${serverApi}/posts.json`);
 
+    // Guardando os dados em formato json()
+    const dados = await resposta.json();
+
     // Tratativa de erro na resposta
     if (!resposta.ok) {
       throw new Error(`Erro: ${resposta.status} - ${resposta.statusText}`);
     }
 
-    // Guardando os dados em formato json()
-    const dados = await resposta.json();
+    // Colocando os dados do objeto dentro de um array para utilização do map.
+    // 1 - Object.keys() serve para extrair o id de cada objeto para um array.
+    // 2 - Map no novo array de ids, onde tem o retorno de um novo objeto criado com os dados ja existentes atraves de um spread
+    // 3 - o ID é associado ao ID do firebase
+    const arrayDePosts = Object.keys(dados).map((post) => {
+      return {
+        ...dados[post],
+        id: post,
+      };
+    });
+
+    console.log(arrayDePosts);
 
     // Extração das categorias
     const categorias = dados.map((post) => post.categoria);
-
     // Gerando um novo array de categorias sem repetição com o Set()
     const categoriasUnica = [...new Set(categorias)];
 
