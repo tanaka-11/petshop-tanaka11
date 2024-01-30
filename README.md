@@ -38,7 +38,7 @@ Como estamos utilizando uma API JSON podemos utilizar os verbos HTTP no padrão 
 
 **Ajustes necessários para o uso da API via Firebase**
 
-- Em index.jsx: Alterar a getStaticProps ajustando o endpoint adicionando `.json` depois do parametro e gerando um novo array com os objetos carregados atraves da `const dados`
+- Em `index.jsx`: Alterar a getStaticProps ajustando o endpoint adicionando `.json` depois do parametro e gerando um novo array com os objetos carregados atraves da `const dados`
 
 - Em `[id].jsx`: Alterar a getStaticProps ajustando o endpoint para `posts/{id}.json`
 
