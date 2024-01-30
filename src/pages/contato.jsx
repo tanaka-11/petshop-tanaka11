@@ -1,7 +1,9 @@
 import Container from "@/components/ui/Container";
 import Head from "next/head";
 import styled from "styled-components";
+import serverApi from "./api/server";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/router";
 
 // CSS
 const StyledContato = styled.section`
@@ -42,10 +44,28 @@ const StyledContato = styled.section`
 `;
 
 export default function Contato() {
-  //
+  // Hook useForm
   const { register, handleSubmit } = useForm();
-  const enviarContato = () => {
-    console.log("Enviando 🐾");
+  let router = useRouter();
+
+  const enviarContato = async (dados) => {
+    const { nome, email, mensagem } = dados;
+
+    const opcoes = {
+      method: "POST",
+      body: JSON.stringify({ nome, email, mensagem }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    };
+
+    try {
+      await fetch(`${serverApi}/contatos.json`, opcoes);
+      alert("Dados Enviados 🐾");
+      router.push("/");
+    } catch (error) {
+      console.error("Erro ao enviar: " + error.message);
+    }
   };
 
   return (
@@ -63,7 +83,15 @@ export default function Contato() {
         <h2>Fale Conosco!</h2>
 
         <Container>
-          <form action="" method="post" autoComplete="off">
+          <form
+            action=""
+            method="post"
+            autoComplete="off"
+            // Passando programação do useForm
+            onSubmit={handleSubmit((dados) => {
+              enviarContato(dados);
+            })}
+          >
             <div>
               <label htmlFor="nome">Nome </label>
               <input
@@ -90,7 +118,7 @@ export default function Contato() {
               <label htmlFor="mensagem">Mensagem </label>
               <textarea
                 maxLength={500}
-                minLength={100}
+                minLength={50}
                 name="mensagem"
                 id="mensagem"
                 cols="30"
