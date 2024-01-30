@@ -36,7 +36,7 @@ Como estamos utilizando uma API JSON podemos utilizar os verbos HTTP no padrão 
 - **PATCH** - Atualizar Alguns Dados
 - **DELETE** - Deletar Dados
 
-**Ajustes necessários para o uso da API via Firebase**
+#### Ajustes necessários para o uso da API via Firebase
 
 - Em `index.jsx`: Alterar a getStaticProps ajustando o endpoint adicionando `.json` depois do parametro e gerando um novo array com os objetos carregados atraves da `const dados`
 
@@ -44,7 +44,7 @@ Como estamos utilizando uma API JSON podemos utilizar os verbos HTTP no padrão 
 
 ---
 
-### Lembrete sobre o styled-component
+### Lembrete sobre o "styled-component"
 
 - Instalar `npm install styled-components`
 - Configurar o next.config para renderização do styled-component adicionando as seguinte linhas
@@ -58,7 +58,13 @@ Como estamos utilizando uma API JSON podemos utilizar os verbos HTTP no padrão 
 
 ---
 
-### Lembrete sobre o JSON server
+### Lembrete sobre o "React Hook Form"
+
+- Instalar `npm install react-hook-form`
+
+---
+
+### Lembrete sobre o "JSON server"
 
 - Instala-lo de maneira global `npm install -g json-server`
 - Colocação do arquivo `db.json` na raiz do projeto (ele servira como um banco de dados para a API)
