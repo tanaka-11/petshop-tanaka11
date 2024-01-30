@@ -17,7 +17,7 @@ const StyledHome = styled.section`
 export async function getStaticProps() {
   try {
     // Conexão com a API
-    const resposta = await fetch(`${serverApi}/posts`);
+    const resposta = await fetch(`${serverApi}/posts.json`);
 
     // Tratativa de erro na resposta
     if (!resposta.ok) {
