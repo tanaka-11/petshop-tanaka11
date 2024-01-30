@@ -12,13 +12,21 @@
 
 ---
 
+### Sites úteis para o projeto
+
+Conversões para Firebase - https://tableconvert.com/json-to-firebase
+
+Teste de SEO - https://pagespeed.web.dev/
+
+---
+
 ### Informações do DataBase(NoSQL) via Firebase
 
 https://petshop-tanaka11-default-rtdb.firebaseio.com/ - Link do Database
 
 Firebase é uma plataforma de serviços web com uma série de funcionalidades de Back-End úteis para aplicações (web, app e jogos). No caso do projeto utilizamos o firebase para adicionar um database chamado "Firebase Realtime Database" para utilização como API JSON. Ele funciona como um **Database não relacional(NoSQL)**, ou seja, baseado em documentos(objetos) no formato JSON.
 
-**_Obs. para teste utilizamos a extensão Thunder Client_** e não é necessario mais a utilização do Node Command Prompt para inicialização da API.
+**_Obs. para teste utilizamos a extensão Thunder Client e não é necessario mais a utilização do Node Command Prompt para inicialização da API._**
 
 Como estamos utilizando uma API JSON podemos utilizar os verbos HTTP no padrão REST:
 
@@ -28,13 +36,11 @@ Como estamos utilizando uma API JSON podemos utilizar os verbos HTTP no padrão 
 - **PATCH** - Atualizar Alguns Dados
 - **DELETE** - Deletar Dados
 
----
+**Ajustes necessários para o uso da API via Firebase**
 
-### Sites úteis para o projeto
+- Em index.jsx: Alterar a getStaticProps ajustando o endpoint adicionando `.json` depois do parametro e gerando um novo array com os objetos carregados atraves da `const dados`
 
-Conversões para Firebase - https://tableconvert.com/json-to-firebase
-
-Teste de SEO - https://pagespeed.web.dev/
+- Em `[id].jsx`: Alterar a getStaticProps ajustando o endpoint para `posts/{id}.json`
 
 ---
 
