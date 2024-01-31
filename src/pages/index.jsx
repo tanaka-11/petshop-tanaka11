@@ -106,7 +106,8 @@ export default function Home({ posts, categorias }) {
       </Head>
 
       <StyledHome>
-        <h2>Pet Notícias</h2>
+        {/* Utilizado o length para fazer a contagem de posts */}
+        <h2>Pet Notícias: {listaDePosts.length}</h2>
 
         <ListaCategorias
           categorias={categorias}
