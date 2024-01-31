@@ -7,6 +7,7 @@ import styled from "styled-components";
 const StyledHeader = styled.header`
   background-color: #f7f7f7;
   box-shadow: var(--sombra-box);
+  border-radius: 10px;
 
   h1 a {
     text-decoration: none;
