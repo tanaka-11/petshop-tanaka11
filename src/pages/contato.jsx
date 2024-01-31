@@ -21,12 +21,11 @@ const StyledContato = styled.section`
 
     /* Seletor "+" significa "elemento adjacente", ou seja, nos paragrafos após a div. */
     & + p {
-      text-align: center;
       font-size: 0.9rem;
-      /* font-style: italic; */
       color: darkred;
       font-weight: bold;
-      margin: 0;
+      margin-left: 1.3rem;
+      margin-top: 0;
     }
 
     & input,
