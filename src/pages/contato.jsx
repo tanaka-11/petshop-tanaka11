@@ -11,7 +11,7 @@ const StyledContato = styled.section`
     content: "💌 ";
   }
 
-  /* Seletor ">" significa dentro do elemento html, ou seja, os campo do formulario dentro da div */
+  /* Seletor ">" significa dentro do "elemento descendente direto", ou seja, so pegam as div de dentro do formulario */
   form > div {
     display: flex;
     flex-direction: column;
