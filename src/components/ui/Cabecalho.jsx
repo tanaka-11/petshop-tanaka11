@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 // CSS
 const StyledHeader = styled.header`
-  background-color: #daf5ff;
+  background-color: #c9ecf8;
   box-shadow: var(--sombra-box);
   border-radius: 10px;
 
