@@ -11,12 +11,23 @@ const StyledContato = styled.section`
     content: "💌 ";
   }
 
-  div {
+  /* Seletor ">" significa dentro do elemento html, ou seja, os campo do formulario dentro da div */
+  form > div {
     display: flex;
     flex-direction: column;
     margin: 0.3rem;
     padding: 0.8rem;
     font-weight: bold;
+
+    /* Seletor "+" significa "elemento adjacente", ou seja, nos paragrafos após a div. */
+    & + p {
+      text-align: center;
+      font-size: 0.9rem;
+      /* font-style: italic; */
+      color: darkred;
+      font-weight: bold;
+      margin: 0;
+    }
 
     & input,
     & textarea {
@@ -44,10 +55,15 @@ const StyledContato = styled.section`
 `;
 
 export default function Contato() {
-  // Hook useForm
-  const { register, handleSubmit } = useForm();
+  // useForm com desestruturação dos parametros
+  const {
+    register, // registro dos campos
+    handleSubmit, // processamento do form
+    formState: { errors }, // state do form
+  } = useForm();
   let router = useRouter();
 
+  // Função de enviarContato via Firebase com redirecinamento p/ pagina inicial.
   const enviarContato = async (dados) => {
     const { nome, email, mensagem } = dados;
 
@@ -86,8 +102,7 @@ export default function Contato() {
           <form
             action=""
             method="post"
-            autoComplete="off"
-            // Passando programação do useForm
+            // programação do useForm
             onSubmit={handleSubmit((dados) => {
               enviarContato(dados);
             })}
@@ -98,10 +113,14 @@ export default function Contato() {
                 type="text"
                 name="nome"
                 id="nome"
-                required
-                {...register("nome")}
+                {...register("nome", { required: true })}
               />
             </div>
+
+            {/* Utilizando o formState para o required do campo nome com optional chaining(evitando erro do type não estar definido) */}
+            {errors.nome?.type == "required" && (
+              <p>Você deve digitar um nome.</p>
+            )}
 
             <div>
               <label htmlFor="email">E-mail </label>
@@ -109,27 +128,40 @@ export default function Contato() {
                 type="email"
                 name="email"
                 id="email"
-                required
-                {...register("email")}
+                {...register("email", { required: true })}
               />
             </div>
+
+            {/* Utilizando o formState para o required do campo email*/}
+            {errors.email?.type == "required" && (
+              <p>Você deve digitar um email.</p>
+            )}
 
             <div>
               <label htmlFor="mensagem">Mensagem </label>
               <textarea
-                maxLength={500}
-                minLength={50}
                 name="mensagem"
                 id="mensagem"
                 cols="30"
                 rows="8"
-                required
-                {...register("mensagem")}
+                maxLength={200}
+                {...register("mensagem", {
+                  required: true,
+                  minLength: 20,
+                })}
               ></textarea>
             </div>
 
+            {/* Utilizando o formState para o required e minLength do campo mensagem*/}
+            {errors.mensagem?.type == "required" && (
+              <p>Você deve digitar uma mensagem.</p>
+            )}
+            {errors.mensagem?.type == "minLength" && (
+              <p>Escreva no mínimo 20 caracteres.</p>
+            )}
+
             <div>
-              <button type="submit">Enviar Mensagem!</button>
+              <button type="submit">Enviar Mensagem</button>
             </div>
           </form>
         </Container>
