@@ -1,6 +1,19 @@
 {
   "short_name": "Petshop Tanakeira",
   "name": "Petshop criado no Téc. em Informática para Internet",
-  "description": "Projeto PWA criado com Next.js",
-  "icons": []
+  "description": "Projeto PWA com Next.js",
+  "icons": [
+    {
+      "src": "images/favicon.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ],
+  "start_url": "/",
+  "scope": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "any",
+  "lang": "pt-br"
 }
