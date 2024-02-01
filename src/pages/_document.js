@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="pt-br">
       <Head>
-        {/* Utilizando manifest para tranforsmar em PWA */}
+        {/* Configurando manifest para tranforsmar em PWA */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="application-name" content="PetShop" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
