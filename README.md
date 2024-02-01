@@ -16,6 +16,14 @@
 
 Significa **_(Aplicativo Web Progressivo)_**. Trata-se de uma abordagem de desenvolvimento de aplicativos web que visa combinar características de sites e aplicativos móveis. Elas são construidas com tecnologias web tradicionais (HTML5, CSS e JavaScript) e oferecem uma experiência semelhante à aplicativos nativos, podendo serem instaladas em dispositivos móveis.
 
+#### Requisitos para PWA
+
+1. **Arquivo de manifesto**: Se trata de um arquivo chamado `manifest.json` com informações gerais sobre o aplicativo: nome, descrição, ícones, cores e etc. Ele deve ser colocado na pasta `public` e adicionado via `meta tag` na página `_document.js`
+
+2. **Criar e configurar um Service Worker (JavaScript)**: Se trata de um script que o navegador executa em segundo plano, de forma independente da interface ou de interações do usuário. Ele permite usar recursos que transformam a aplicação em PWA, como instalação/desinstalação, cache offline, notificações e etc. No caso do Next.js, o `Service Worker` será criado e configurado automaticamente com o auxílio da lib `next-pwa` e ajuste no `next.config.js`
+
+3. **Publicação em servidor com suporte à HTTPS**: Utilizamos a Vercel e Netlify para sua publicação.
+
 ---
 
 ### Sites úteis para o projeto
