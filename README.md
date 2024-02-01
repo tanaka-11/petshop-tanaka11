@@ -1,4 +1,4 @@
-# Projeto Petshop com Next.js
+# Projeto Petshop com Next.js em formato PWA
 
 # Recursos Utilizados
 
@@ -9,6 +9,12 @@
 - Map, Filter
 - Manipulação de formulário
 - Publicação na Vercel e Netlify
+
+---
+
+### PWA - Progressive Web Application
+
+Significa **_(Aplicativo Web Progressivo)_**. Trata-se de uma abordagem de desenvolvimento de aplicativos web que visa combinar características de sites e aplicativos móveis. Elas são construidas com tecnologias web tradicionais (HTML5, CSS e JavaScript) e oferecem uma experiência semelhante à aplicativos nativos, podendo serem instaladas em dispositivos móveis.
 
 ---
 
@@ -94,5 +100,3 @@ Pode ser útil para páginas cujos dados mudam frequentemente ou são diferentes
 #### Sobre a função getStaticPaths
 
 Utilizado para pre-renderizar páginas que usam rotas dinâmicas e dependem de parâmeteros(params) do `getStaticProps` para serem construídas.
-
----
