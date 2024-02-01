@@ -20,7 +20,7 @@ Significa **_(Aplicativo Web Progressivo)_**. Trata-se de uma abordagem de desen
 
 **1. Arquivo de manifesto**: Se trata de um arquivo chamado `manifest.json` com informações gerais sobre o aplicativo: nome, descrição, ícones, cores e etc. Ele deve ser colocado na pasta `public` e adicionado via `link` na página `_document.js` dentro do `<Head>`
 
-**2. Criar e configurar um Service Worker (JavaScript)**: Se trata de um script que o navegador executa em segundo plano, de forma independente da interface ou de interações do usuário. Ele permite usar recursos que transformam a aplicação em PWA, como instalação/desinstalação, cache offline, notificações e etc. No caso do Next.js, o `Service Worker` será criado e configurado automaticamente com o auxílio da lib `next-pwa` e ajuste no `next.config.js`
+**2. Criar e configurar um Service Worker (JavaScript)**: Se trata de um script que o navegador executa em segundo plano, de forma independente da interface ou de interações do usuário. Ele permite usar recursos que transformam a aplicação em PWA, como instalação/desinstalação, cache offline, notificações e etc. No caso do Next.js, o `Service Worker` será criado e configurado automaticamente com o auxílio da lib `next-pwa` e ajuste no `next.config.js`. **_Obs. Utilizar o comando `npm install next-pwa` para a instalação da lib_**
 
 **3. Publicação em servidor com suporte à HTTPS**: Utilizamos a Vercel e Netlify para sua publicação.
 
